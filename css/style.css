@@ -1,1 +1,383 @@
+:root {
+    --firstFont: 'Montserrat', sans-serif;
+    --secondFont: 'Roboto', sans-serif;
+    --headerbg: #dbf4fe;
+    --blueColor: #3b8df3;
+    --sectionColor: #f4fcff;
+    --headingColor: #2b333e;
+    --blackColor: #000000;
+}
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--sectionColor);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--headerbg);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+body {
+    font-family: var(--firstFont);
+    font-size: 16px;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+.bg-color {
+    background-color: var(--headerbg);
+}
+
+.blue-color {
+    color: var(--blueColor);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--headingColor);
+    font-weight: bold;
+}
+
+
+h1 {
+    font-family: var(--secondFont);
+    font-size: 1.563rem;
+    color: var(--blackColor);
+    line-height: 1.813rem;
+    margin-bottom: 0.938rem;
+    margin-top: 1.875rem;
+    max-width: 185px;
+}
+
+@media(min-width: 1140px) {
+    h1 {
+        font-size: 4.8125vw;
+        line-height: calc(4.8125vw + 10px);
+        max-width: 100%;
+    }
+}
+
+h2 {
+    font-size: 1.563rem;
+    line-height: calc(1.563rem + 10px);
+    margin-bottom: 0.625rem;
+}
+
+@media(min-width: 1140px) {
+    h2 {
+        font-size: 2.8125vw;
+        line-height: calc(2.8125vw + 10px);
+    }
+}
+
+h3 {
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+    margin-bottom: 0.625rem;
+}
+
+h4 {
+    font-size: 0.938rem;
+    font-weight: 400;
+    line-height: 1.375rem;
+    color: var(--blueColor);
+    margin-bottom: 0.625rem;
+}
+
+p {
+    font-size: 0.938rem;
+    line-height: 1.375rem;
+    color: var(--blackColor);
+    margin-bottom: 0.625rem;
+}
+
+section {
+    padding: 50px 0px !important;
+}
+
+@media(min-width: 1140px) {
+    section {
+        padding: 100px 0px !important;
+    }
+}
+
+/* Start Header Section  */
+@media (min-width: 1140px) {
+    .header {
+        padding: 0px 110px !important;
+    }
+}
+
+.header .navbar {
+    padding: 0;
+}
+
+.header .navbar .logo {
+    color: var(--blackColor);
+    font-weight: bold;
+    font-size: 1.875rem;
+    line-height: 45px;
+    letter-spacing: 0.96px;
+}
+
+.header .navbar-nav .nav-item .nav-link {
+    font-size: 0.938rem;
+    line-height: 37.5px;
+    letter-spacing: 0.96px;
+    color: var(--blackColor);
+    padding: 0.938rem 1.875rem;
+}
+
+.header .navbar-nav .nav-item .nav-link:hover,
+.header .navbar-nav .nav-item .nav-link.active{
+    color: var(--blueColor);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* End Header Section  */
+/* Start Banner Section  */
+.banner .container-xl .row p {
+    max-width: 300px;
+}
+
+@media (min-width: 1140px) {
+    .banner {
+        min-height: calc(100vh - 70px);
+    }
+    
+    .banner .container-xl .row p {
+        max-width: 100%;
+    }
+
+}
+
+.shape-1 {
+    height: 220px;
+    width: 220px;
+    background: radial-gradient(#87e3fa, #b19bee);
+    bottom: -80px;
+    left: 37px;
+}
+
+.shape-2 {
+    border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+    top: -100px;
+    right: 10px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(#87e3fa, #b19bee);
+}
+
+.mockup-img {
+    z-index: 1;
+}
+
+.animation-delay-small {
+    animation-delay: 0.15s;
+}
+
+.animation-delay-medium {
+    animation-delay: 0.3s;
+}
+
+.animation-delay-big {
+    animation-delay: 0.4s;
+}
+
+.fade {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    padding: auto;
+    animation-name: fade-in;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+/* End Banner Section  */
+/*Start Services section  */
+.services .serv-text p {
+    color: var(--blueColor);
+}
+
+.services .serv-text h2 {
+    max-width: 832px;
+}
+
+.services .box {
+    padding: 3.5rem 0.938rem;
+    border: 0.125rem solid var(--headerbg);
+    min-height: 384px;
+}
+
+.services .box .top-box svg {
+    font-size: 2.813rem;
+    margin-bottom: 2.25rem;
+}
+
+.services .box p {
+    margin-top: 1.5rem;
+    margin-bottom: 2.813rem;
+}
+
+.services .box a,
+.about-us a {
+    color: var(--blackColor);
+    font-size: 0.938rem;
+    transition: all .3s ease-in-out;
+}
+
+.services .box a:hover,
+.about-us a:hover {
+    color: var(--blueColor);
+}
+
+.services .box a:hover svg,
+.about-us a:hover svg {
+    color: var(--blueColor);
+}
+
+/*End Services section  */
+
+/* Start Testimonials Section  */
+.testimonials .testimonial {
+    border: 2px solid var(--headerbg);
+    padding: 1.438rem 1.063rem;
+    min-height: 267px;
+}
+
+.testimonials .testimonial::before,
+.testimonials .testimonial::after {
+    position: absolute;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 2rem;
+    color: var(--headerbg);
+}
+
+.testimonials .testimonial::before {
+    content: "\f10d";
+    top: 12px;
+    left: 7px;
+}
+
+.testimonials .testimonial::after {
+    content: "\f10e";
+    bottom: 12px;
+    right: 7px;
+}
+
+.testimonials .testimonial .test-img img {
+    width: 73px;
+    height: 73px;
+    border-radius: 50%;
+}
+
+.testimonials .testimonial p:first-of-type {
+    margin-bottom: 0.938rem;
+}
+
+.testimonials .testimonial h4,
+.testimonials .testimonial p:last-of-type {
+    color: var(--blackColor);
+    font-size: 0.813rem;
+    margin-bottom: 0;
+}
+
+.testimonials .testimonial p:last-of-type {
+    margin-top: 0.375rem;
+}
+
+.testimonials .testimonial .stars {
+    margin-bottom: 1.25rem;
+}
+
+.testimonials .testimonial .stars svg {
+    color: #ffba00;
+}
+
+/* End Testimonials Section  */
+
+/* Start Footer  */
+.footer {
+    padding: 80px 0 0 0;
+    background-color: var(--headingColor);
+}
+
+.footer .logo {
+    font-size: 1.875rem;
+}
+
+.footer h4 {
+    font-size: 0.938rem;
+    font-weight: 500;
+}
+
+.gray-color {
+    color: #abadb0;
+}
+
+.footer a,
+.footer p {
+    font-size: 0.938rem;
+}
+
+.footer a:hover {
+    color: #ffffff;
+}
+
+.footer .address p {
+    max-width: 169px;
+}
+
+.footer .social-media li {
+    width: 44px;
+    height: 44px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+}
+
+.footer .copyright {
+    border-top: 1px solid #abadb0;
+}
+
+/* End Footer  */
+
+.scrollBtn {
+    background-color: var(--headerbg);
+    border-radius: 6px;
+    cursor: pointer;
+    bottom: 5px;
+    right: -100px;
+    transition: all .3s ease-in-out;
+}
+
+.scrollBtn.active {
+    right: 10px;
+}
